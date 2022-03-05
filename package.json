@@ -1,0 +1,19 @@
+{
+  "name": "timeruruktek",
+  "version": "1.0.0",
+  "description": "Timer For personal website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uruktek/Timer.git"
+  },
+  "author": "cleedom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Uruktek/Timer/issues"
+  },
+  "homepage": "https://github.com/Uruktek/Timer#readme"
+}
