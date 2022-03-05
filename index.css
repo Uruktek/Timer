@@ -2,11 +2,10 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
 }
-
 #topbar {
   background-color: blueviolet;
-  font-family: "Orbitron", sans-serif;
   float: center;
   text-align: center;
   font-size: 24px;
@@ -24,23 +23,22 @@
 .collapsible:hover {
   background-color: blueviolet;
 }
-
 .content {
   display: none;
   text-align: center;
-  font-family: "Orbitron", sans-serif;
   font-size: 15px;
   overflow: hidden;
   max-height: 0;
   background-color: blueviolet;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.5s ease-out;
 }
-
 .choice {
   width: 50%;
   float: left;
 }
-
 body {
   background-color: black;
+}
+.clock {
+  display: none;
 }
