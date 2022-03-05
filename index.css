@@ -1,41 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
 
-body {
-    background-color: black;
+* {
+  box-sizing: border-box;
 }
 
-#clock {
-    font-family: 'Orbitron', sans-serif;
-    color: #66ff99;
-    font-size: 200px;
-    text-align: center;
-    align-self: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }
+#topbar {
+  background-color: blueviolet;
+  font-family: "Orbitron", sans-serif;
+  float: center;
+  text-align: center;
+  font-size: 24px;
+}
+.collapsible {
+  background-color: blueviolet;
+  float: center;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+}
+.active,
+.collapsible:hover {
+  background-color: blueviolet;
+}
 
-  #date {
-    font-family: 'Orbitron', sans-serif;
-    color: #66ff99;
-    font-size: 125px;
-    text-align: top;
-    margin: 0;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-  }
+.content {
+  display: none;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+  max-height: 0;
+  background-color: blueviolet;
+  transition: max-height 0.2s ease-out;
+}
 
-  #dateText {
-    font-family: 'Orbitron', sans-serif;
-    color: #66ff99;
-    font-size: 150px;
-    text-align: bottom;
-    margin: 0;
-    position: absolute;
-    bottom: 20%;
-    left: 10%;
-  }
+.choice {
+  width: 50%;
+  float: left;
+}
+
+body {
+  background-color: black;
+}
