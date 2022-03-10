@@ -10,6 +10,16 @@
   text-align: center;
   font-size: 24px;
 }
+.clock {
+  background-color: blueviolet;
+  float: center;
+  color: white;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  width: 100%;
+  font-size: 17px;
+}
 .collapsible {
   background-color: blueviolet;
   float: center;
@@ -31,6 +41,15 @@
   max-height: 0;
   background-color: blueviolet;
   transition: max-height 0.5s ease-out;
+}
+.content button {
+  text-align: center;
+  float: center;
+  width: 100%;
+  background-color: blueviolet;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
 }
 .choice {
   width: 50%;

@@ -1,4 +1,4 @@
-var collapsibleMenuContent = document.getElementsByClassName("collapsible");
+let collapsibleMenuContent = document.getElementsByClassName("collapsible");
 for (let index = 0; index < collapsibleMenuContent.length; index++) {
     collapsibleMenuContent[index].addEventListener("click", function() {
         this.classList.toggle("active");
@@ -15,6 +15,11 @@ for (let index = 0; index < collapsibleMenuContent.length; index++) {
         }
     });
 }
-
-let min;
-let second;
+let buttonsOfTimer = document.getElementsByClassName("1min");
+buttonsOfTimer[0].addEventListener("click",function(){
+    setInterval(function(){
+        let currentTime = new Date();
+        document.getElementById("clock").style.color = 'red';
+        document.getElementById("clock").innerHTML = currentTime.toLocaleDateString();
+    },1000);
+});
