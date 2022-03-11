@@ -1,18 +1,18 @@
-let startTime = new Date().getTime();
-
-let x = setInterval(function() {
-    let now = new Date().getTime();
-
-    console.log(now);
-
-    var distance = startTime - now;
-
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-    console.log(minutes);
-
-    if(distance < 0){
-        clearInterval(x);
-        console.log("Expired");
+function startTimer(duration, display) {
+  var timer = duration,
+    seconds;
+  setInterval(function () {
+    seconds = parseInt(timer % 60, 10);
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = seconds;
+    if (--timer < 0) {
+      timer = duration;
     }
-})
+  }, 1000);
+}
+
+window.onload = function () {
+  var fiveMinutes = 60 * 5,
+    display = document.querySelector("#time");
+  startTimer(fiveMinutes, display);
+};

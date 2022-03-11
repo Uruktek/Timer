@@ -15,18 +15,23 @@ for (let index = 0; index < collapsibleMenuContent.length; index++) {
     }
   });
 }
-let currentDate = new Date().getTime();
-currentDate + 60000; //testing
-let buttonsOfTimer = document.getElementsByClassName("1min");
-buttonsOfTimer[0].addEventListener(
-  "click",
-  function () {
-    let now = new Date().getTime();
-    let distance = now - currentDate;
-    console.log(distance);
-    if (distance < 0) {
-      console.log("it works?");
+function startTimer(duration, display) {
+  var timer = duration,
+    seconds;
+  setInterval(function () {
+    seconds = parseInt(timer % 60, 10);
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    display.textContent = seconds;
+    console.log("beep?");
+    console.log(timer);
+    if (--timer < 0) {
+      timer = duration;
     }
-  },
-  1000
-);
+  }, 1000);
+}
+
+let oneminButton = document.getElementsByClassName("1min");
+console.log(oneminButton);
+oneminButton[0].addEventListener("click", function () {
+  startTimer(60, document.querySelector("#clock"));
+});
